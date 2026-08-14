@@ -1,0 +1,17 @@
+{
+  "name": "slack-bot",
+  "version": "1.0.0",
+  "description": "best slack bot ever made ",
+  "license": "ISC",
+  "author": "Noveop/Azar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@slack/bolt": "^5.0.0",
+    "axios": "^1.19.0",
+    "dotenv": "^17.4.2"
+  }
+}
