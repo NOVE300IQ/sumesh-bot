@@ -21,7 +21,9 @@ app.command("/sumesh-help", async ({ command, ack, respond}) => {
     await respond({
         text: `Available Commands Of Sumesh
         /sumesh-ping - wake up Sumesh (Just Like kicking him while sleeping)
-        /sumesh-help - know every commands Sumesh have`
+        /sumesh-help - know every commands Sumesh have
+        /sumesh-catfact - Get catfacted by Sumesh.
+        /sumesh-joke - get joked by Sumesh.`
     });
 });
 
