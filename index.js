@@ -39,6 +39,26 @@ app.command("/sumesh-aboutyou", async ({command, ack, respond}) => {
 })
 
 
+app.command("/sumesh-roast", async ({ ack, command, respond}) => {
+  await ack
+  const user = command.text.trim();
+   if(!user) {
+    await.respond('Are you trying to roast me ? Mention somebody to roast bro :( ');
+    return;
+   }
+   const roasts = [
+        `🔥 ${user}, your code has more bugs than a Minecraft server running on a potato. 💀`,
+        `🔥 ${user}, I've seen better variable names in a ransom note.`,
+        `🔥 ${user}, your Git history is just \`fix\`, \`fix2\`, \`final\`, \`final-final\`. 💀`,
+        `🔥 ${user}, even Stack Overflow doesn't know what you were trying to do.`,
+        `🔥 ${user}, your code works perfectly... as long as nobody runs it. 💀`
+    ];
+
+    const roast = roasts[Math.floor(Math.random() * roasts.length)];
+
+    await respond(roast);
+
+})
 
 app.command("/sumesh-catfact", async ({ command, ack, respond}) => {
     await ack();
