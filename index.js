@@ -43,20 +43,25 @@ app.command("/sumesh-roast", async ({ ack, command, respond}) => {
   await ack
   const user = command.text.trim();
    if(!user) {
-    await.respond('Are you trying to roast me ? Mention somebody to roast bro :( ');
+    await respond('Are you trying to roast me ? Mention somebody to roast bro :( ');
     return;
    }
-   const roasts = [
-        `🔥 ${user}, your code has more bugs than a Minecraft server running on a potato. 💀`,
-        `🔥 ${user}, I've seen better variable names in a ransom note.`,
-        `🔥 ${user}, your Git history is just \`fix\`, \`fix2\`, \`final\`, \`final-final\`. 💀`,
-        `🔥 ${user}, even Stack Overflow doesn't know what you were trying to do.`,
-        `🔥 ${user}, your code works perfectly... as long as nobody runs it. 💀`
+    const roasts = [
+        "your code has more bugs than a Minecraft server running on a potato. 💀",
+        "I've seen better variable names in a ransom note.",
+        "your Git history is just `fix`, `fix2`, `final`, `final-final`. 💀",
+        "even Stack Overflow doesn't know what you were trying to do.",
+        "your code works perfectly... as long as nobody runs it. 💀",
+        "you don't need a debugger. You need divine intervention. 🙏",
+        "your code is so unstable it needs emotional support. 💀",
+        "bro's code has more red lines than a crime scene. 🚨",
+        "I would explain your code, but I don't understand it either. 😭",
+        "your IDE isn't showing errors. It's showing warnings for its own safety. 💀"
     ];
 
-    const roast = roasts[Math.floor(Math.random() * roasts.length)];
+    const randomRoast = roasts[Math.floor(Math.random() * roasts.length)];
 
-    await respond(roast);
+    await respond(`🔥 <@${user}> ${randomRoast}`);
 
 })
 
