@@ -27,6 +27,19 @@ app.command("/sumesh-help", async ({ command, ack, respond}) => {
     });
 });
 
+app.command("/sumesh-aboutyou", async ({command, ack, respond}) => {
+  await ack;
+  await respond({
+    text: `Heyy Ladies And Gentleman, 
+    Its me sumesh, not just a normal bot but the bot who really cares about you.
+    My owner's name is NoveOP :)
+    Also i love everyone.
+    And the supernatural power is i get improved everytime.`
+  })
+})
+
+
+
 app.command("/sumesh-catfact", async ({ command, ack, respond}) => {
     await ack();
     try{
