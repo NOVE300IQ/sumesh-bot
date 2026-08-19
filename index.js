@@ -92,6 +92,12 @@ ${response.data.punchline}`
   }
 });
 
+app.command("/sumesh-time", async ({ ack, respond }) => {
+  await ack;
+  await respond({text:`Broo, why are you too lazy, check you system taskbar...`
+  });
+});
+
 (async () => {
   await app.start();
   console.log("Sumesh Is ONLINE. Let Him Cook!!");
