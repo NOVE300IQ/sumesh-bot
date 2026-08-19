@@ -38,6 +38,20 @@ app.command("/sumesh-aboutyou", async ({command, ack, respond}) => {
   })
 })
 
+app.command("/sumesh-excuses", async ({ack, command, respond}) => {
+  await ack;
+  const excuses = [
+    "ohh I was eating breakfast sir :(",
+    "That's not a bug broo, its an undocumented feature",
+    "WOW, the production server behave differently",
+    "Sir, I was in a call with NASA",
+    "Who wrote this code, ohh iam the only employee here :("
+  ]
+
+  const randomExcuses = 
+  excuses[Math.floor(Math.random() * excuses.length)]
+  await respond(randomExcuses)
+})
 
 app.command("/sumesh-roast", async ({ ack, command, respond}) => {
   await ack
